@@ -1,0 +1,24 @@
+[
+    {
+            "userid": " 1",
+            "username": "lanapant",
+            "email": "lp@lp.com"
+        },
+        {
+            "userid": "2",
+            "username": "shakalaka",
+            "email": "sp@gm.com"
+        
+    },
+    {
+            "userid": " 3",
+            "username": "KAISER",
+            "email": "kaiser@mail.com"
+        },
+        {
+            "userid": "4",
+            "username": "Turtle",
+            "email": "turtle@gm.com"
+        
+    }
+]

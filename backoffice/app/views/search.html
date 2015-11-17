@@ -1,0 +1,65 @@
+
+
+
+
+
+
+<h2 style="padding-bottom:10px;">SEARCH FORM</h2>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label  class="col-sm-2 control-label"> USERNAME</label>
+    <div class="col-sm-10">
+      <input type="username" class="form-control" id="username" placeholder="username" ng-model="UserUsername">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">FIRST NAME</label>
+    <div class="col-sm-10">
+      <input type="fname" class="form-control" id="fname" placeholder="first name" ng-model="UserFirstName">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">LAST NAME</label>
+    <div class="col-sm-10">
+      <input type="lname" class="form-control" id="lname" placeholder="last name" ng-model="UserLastName">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="" class="col-sm-2 control-label">EMAIL</label>
+    <div class="col-sm-10">
+      <input type="" class="form-control" id="" placeholder="Email" ng-model="UserEmail">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" ng-click='loadSearch()'> SEARCH </button>
+      <button type="submit" class="btn btn-default" ng-click='clearSearch()'> CLEAR </button>
+    </div>
+
+    </div>
+    </div>
+  </div>
+</form>
+<p ng-show="users && users.length == 0">no vals with this filter</p>
+<table ng-show="users.length"  class="table table-striped">
+    <thead>
+      <tr>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+        <th>ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in users | filter:search">
+        <td>  <a href="#/search/{{user.userid}}" class="thumb"> {{user.username}}</a></td>
+        <td>{{user.email}}</td>
+        <td>{{user.userid}}</td>
+    </tr>
+</tbody>
+</table>
+
+  
+
+
+
